@@ -4,14 +4,14 @@ export class KeyIntegration {
   async createKey(key: any): Promise<any> {
     try {
       const searchKey = await db
-        .prepare("SELECT * FROM block WHERE keyPublic = ?")
+        .prepare("SELECT * FROM key WHERE keyPublic = ?")
         .get(key.keyPublic);
       if (searchKey) {
         return searchKey;
       }
       const response = await db
         .prepare(
-          "INSERT INTO block (codigoWork, keyPublic, privateKey, status) VALUES (?, ?, ?, ?)"
+          "INSERT INTO key (codigoWork, keyPublic, privateKey, status) VALUES (?, ?, ?, ?)"
         )
         .run(key.codigoWork, key.keyPublic, key.privateKey, key.status);
 

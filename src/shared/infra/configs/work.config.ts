@@ -12,7 +12,7 @@ export function initializeDatabase() {
       rangeStart TEXT NOT NULL,
       rangeEnd TEXT NOT NULL
     );
-    CREATE TABLE IF NOT EXISTS block (
+    CREATE TABLE IF NOT EXISTS key (
       codigo integer PRIMARY KEY AUTOINCREMENT,
       codigoWork integer NOT NULL,
       keyPublic TEXT NOT NULL,
