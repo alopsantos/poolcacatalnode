@@ -1,4 +1,7 @@
 import { app } from "./app";
+import { initializeDatabase } from "@shared/infra/configs/work.config";
+
+initializeDatabase();
 
 const startServer = async () => {
   try {
