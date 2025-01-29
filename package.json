@@ -1,0 +1,36 @@
+{
+  "name": "poolcacatalnode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotenv -e .env tsx watch ./src/shared/infra/http/server.ts",
+    "build": "dotenv -e .env tsup src",
+    "setup": "dotenv -e .env tsx ./src/shared/infra/http/postgres/setup.ts",
+    "start": "dotenv -e .env node ./dist/shared/infra/http/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.17.12",
+    "@types/pg": "^8.11.10",
+    "sqlite3": "^5.1.7",
+    "tsup": "^8.3.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.1",
+    "fastify": "^5.2.0",
+    "fastify-type-provider-zod": "^4.0.2",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
+    "reflect-metadata": "^0.2.2",
+    "zod": "^3.24.1"
+  }
+}
