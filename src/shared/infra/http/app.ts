@@ -60,7 +60,7 @@ async function work() {
     9,
     0
   ];
-  for (let i = start; i <= end; i++) {
+  for (let i = end; i >= start; i--) {
     const hexValue = i.toString(16);
     for (let a = 4; a <= 7; a++) {
       for (let b = 0; b <= arrayHexa.length - 1; b++) {
@@ -93,9 +93,15 @@ async function work() {
         }
         console.log(privateKey);
       }
+      // console.log(`${hexValue.slice(0, 9)}${a}1${hexValue.slice(11, 17)}`);
     }
   }
-
+  // 5adbaadec51000200
+  // 5adbaadec71000118
+  // 5adbaadec61000126
+  // 5adbaadec7400001c0
+  // 5adbaadec60000243
+  // 000000000000000000000000000000000000000000000005adbaadec780065e17
   return foundValues;
 }
 
